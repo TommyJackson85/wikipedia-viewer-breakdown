@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Tells the browser what the title of this page should be. -->
+  <title>Wikipedia Viewer and Search Breakdown</title>
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!--SCSS/CSS; FrontAwesome/CSS; Bootstrap Map -->
+<link href="css/main.css" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-theme.css.map" rel="stylesheet" media="screen">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+<div>
+  <div id="banner">
+  <div class="row">  
+    <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
+    <img id="globe" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1122px-Wikipedia-logo-v2.svg.png" class="img-rounded"></div>
+    
+  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <h2 id="mainHeader">Wikipedia Search Breakdown</h2>
+    <p></p>
+  
+  <!--Search Bar-->  
+  <div id="search">
+  <h6 class="subHeader">Search a specific Topic and remove the irrelevent links to break down your search..</h6>
+  <div id="searchBar">
+    <div class="input-group">      
+      <input id="searchInput" type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button id="searchButton" class="btn btn-default" type="button">Search</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  </div>
+    </div>
+    </div>
+  </div>
+   <!--Output Section-->
+
+  <div id="output">
+ <h6 class="subHeader">Your results will appear hear. <h6>
+   <!--Random Button-->    
+   </div>
+   
+   <div id="copywrite"><h6> &#9400; Thomas Jackson</h6>
+     <h6> Image: &#9400; Wikipedia</h6>
+      <h6>(Project for Free Code Camp, Full Stack course)</h6></div>
+</div>
+  
+</div>
+  <!--jQuery-->
+  <script src="js/jQuery.js"></script>
+<!--BOOTSTRAP JS LINK -->
+  <script src="js/bootstrap.js"></script> 
+  <script src="js/bootstrap.min.js"></script>
+  <!-- More on helper.js in the class -->
+  <script src="js/wikipediaAppBuilder.js"></script>
+</body>
+</html>

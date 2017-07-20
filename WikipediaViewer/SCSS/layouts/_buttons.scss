@@ -1,0 +1,26 @@
+#searchButton{ background: #757D75;
+}
+.button, .button1 {
+  background: #95A5A6;
+color: #fff;
+  padding: 1px 5px 3px 5px;
+  margin:0px 5px 0px 5px;
+  border-radius: 10px 10px 10px 10px;
+}
+ .button2 {
+   animation: OneToTwo 1.3s;
+    animation-delay: .7s;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes OneToTwo {
+  
+  from { 
+    background-color: #95A5A6;
+   
+    }
+  to {
+    background-color: #48929B;
+    }
+  
+}
