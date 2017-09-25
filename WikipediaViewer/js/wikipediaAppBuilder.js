@@ -12,10 +12,6 @@ $(document).ready(function() {
     }, 1700);
   };
   
-  var randomLink =
-    "<div class='alert alert-success alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><h6><strong>Link Example: </strong>Click the Random button for a Random Page, or click the 'x' to remove the link..</h6><button id='randomButton' class='button btn-default' type='button' href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button></div>";
-  
-  $("#output").append(randomLink);
   //button to open Link Example
   $("#randomButton").on("click", pageOpener);
 
@@ -39,9 +35,13 @@ $(document).ready(function() {
         for (var i = 0; i < data[1].length; i++) {
           // console.log(data[1][i]);
 
-          $("#output").append("<div class='alert alert-success alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><button class='button btn-default' type='button' href='" + data[3][i] + "'>" + data[1][i] + "</button><p>" + data[2][i] + "</p></div>");
+          $("#output").append(`<div class='col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8'>
+            <div class='alert alert-success alert-dismissible' role='alert'>
+            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+            <span aria-hidden='true'>&times;</span></button>
+            <button class='button btn-default' type='button' href='` + data[3][i] + `'>` + data[1][i] + `</button>
+            <p class='linkText'>` + data[2][i] + `</p></div></div>`);
         }
-
         //button to open list of links
         $(".button").on("click", pageOpener);
       }

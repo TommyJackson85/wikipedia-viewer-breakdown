@@ -1,0 +1,84 @@
+/*Some media Queries are empty because this is either unfinished or may need alterations..*/
+@media (min-width: 320px) { 
+
+}
+@media (min-width: 360px) {
+  .alert{ 
+    margin: 0px 0px 5px 0px;
+  }
+
+}
+@media (min-width: 375px) { 
+}
+@media (min-width: 412px) { 
+
+}
+@media (min-width: 414px) { 
+
+}
+@media (min-width: 568px) { 
+
+#mainHeader {
+    max-width: 900px;
+  margin: 1% 1% 1% 5%;
+}
+
+.linkText, .button, #randomButton {
+    font-size: 18px;
+} 
+
+#copywrite {
+	h6 {
+		font-size: 18px;
+	}
+}
+
+}
+@media (min-width: 640px) { 
+
+}
+@media (min-width: 667px) { 
+
+}
+@media (min-width: 732px) { 
+
+}
+@media (min-width: 736px) { 
+
+}
+@media (min-width: 768px) { 
+	#search {
+  margin: 1% 1% 1% 1%;
+   padding: 0% 0% 0% 200px;
+  
+  #searchBar {
+  	max-width: 700px;
+    padding: 1% 1% 1% 0%;
+	margin: 0% 0% 0% 0%; 
+  }
+}
+
+#mainHeader {
+    font-size: 40px;
+     padding: 0% 0% 0% 200px;
+     margin: 1% 0px 1% 0%;
+}
+
+.subHeader, #copywrite {
+  font-size: 22px;
+  margin: 1% 0% 1% 0%;
+}
+
+  .linkText, .button, #randomButton {
+    font-size: 22px;
+} 
+}
+@media (min-width: 1024px) { 
+}
+@media (min-width: 1086px) { 
+  .subHeader, #copywrite {
+  margin: 1% 5% 0% 0%;
+}
+}
+@media (min-width: 1366px) { 
+}
