@@ -1,8 +1,38 @@
 $(document).ready(function() {
   
   //opens page after clicking.
-  var pageOpener = function(open) {
+
+/*    <div class='col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 
+col-lg-8'><div class='alert alert-success alert-dismissible' role='alert'>
+<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+<span aria-hidden='true'>&times;</span>
+</button>
+<p class='linkText'><strong>Link Example: </strong>
+Click the Random button for a Random Page, or click the 'x' to remove the link..</p>
+<button id='randomButton' class='button btn-default' type='button' 
+data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
+</div></div> */
+var pageOpener = function(open) {
+    var a = document.createElement('a');
+    a.setAttribute("href", this.getAttribute("data-href"));
+    a.setAttribute("target", "_blank");
+
+    var dispatch = document.createEvent("HTMLEvents");
+    dispatch.initEvent("click", true, true);
+    a.dispatchEvent(dispatch);
+}
+
+/*  var pageOpener = function(open) {
     open.preventDefault();
+    var a = document.createElement('a');
+    a.setAttribute("href", this.getAttribute("data-href"));
+     a.setAttribute("target", "_blank");
+
+      var dispatch = document.createEvent("HTMLEvents");
+    dispatch.initEvent("click", true, true);
+    a.dispatchEvent(dispatch);
+
+
     // prevent default anchor behavior
     var goTo = this.getAttribute("href");
     //jQUERY animation
@@ -11,7 +41,7 @@ $(document).ready(function() {
       window.open(goTo, "_blank");
    // }, 1700);
   };
-  
+ */ 
   //button to open Link Example
   $("#randomButton").on("click", pageOpener);
 
