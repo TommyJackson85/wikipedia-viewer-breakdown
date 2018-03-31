@@ -6,10 +6,10 @@ $(document).ready(function() {
     // prevent default anchor behavior
     var goTo = this.getAttribute("href");
     //jQUERY animation
-    $(this).toggleClass("button, button2");
-    setTimeout(function() {
+    //$(this).toggleClass("button, button2");
+   // setTimeout(function() {
       window.open(goTo, "_blank");
-    }, 1700);
+   // }, 1700);
   };
   
   //button to open Link Example
