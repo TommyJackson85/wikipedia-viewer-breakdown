@@ -14,8 +14,8 @@ data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
 </div></div> */
 
 
-  /*var pageOpener = function(open) {
-    open.preventDefault();
+  var pageOpener = function(event) {
+    event.preventDefault();
 
     // prevent default anchor behavior
     var goTo = this.getAttribute("href");
@@ -24,20 +24,10 @@ data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
    // setTimeout(function() {
       window.open(goTo, "_blank");
    // }, 1700);
-  };*/
+  };
  
   //button to open Link Example
- $("#randomButton").on("click touchstart", function(open) {
-    open.preventDefault();
-
-    // prevent default anchor behavior
-    var goTo = this.getAttribute("href");
-    //jQUERY animation
-    //$(this).toggleClass("button, button2");
-   // setTimeout(function() {
-      window.open(goTo, "_blank");
-   // }, 1700);
-  });
+ $("#randomButton").on("click touchstart", pageOpener());
 
  //console.log(openLink());
   $("#searchButton").on("click touchstart", function(collect) {
@@ -67,7 +57,7 @@ data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
             <p class='linkText'>` + data[2][i] + `</p></div></div>`);
         }
         //button to open list of links
-       $(".button").on("click", pageOpener);
+       $(".button").on("click", pageOpener());
       }
     });
   });
