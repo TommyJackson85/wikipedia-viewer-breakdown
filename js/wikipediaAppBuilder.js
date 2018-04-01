@@ -12,26 +12,10 @@ Click the Random button for a Random Page, or click the 'x' to remove the link..
 <button id='randomButton' class='button btn-default' type='button' 
 data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
 </div></div> */
-var pageOpener = function(open) {
-    var a = document.createElement('a');
-    a.setAttribute("href", this.getAttribute("data-href"));
-    a.setAttribute("target", "_blank");
 
-    var dispatch = document.createEvent("HTMLEvents");
-    dispatch.initEvent("click", true, true);
-    a.dispatchEvent(dispatch);
-}
 
-/*  var pageOpener = function(open) {
+  var pageOpener = function(open) {
     open.preventDefault();
-    var a = document.createElement('a');
-    a.setAttribute("href", this.getAttribute("data-href"));
-     a.setAttribute("target", "_blank");
-
-      var dispatch = document.createEvent("HTMLEvents");
-    dispatch.initEvent("click", true, true);
-    a.dispatchEvent(dispatch);
-
 
     // prevent default anchor behavior
     var goTo = this.getAttribute("href");
@@ -41,11 +25,11 @@ var pageOpener = function(open) {
       window.open(goTo, "_blank");
    // }, 1700);
   };
- */ 
+ 
   //button to open Link Example
-  $("#randomButton").on("click", pageOpener);
+ $("#randomButton").on("click", pageOpener);
 
-  //console.log(openLink());
+ //console.log(openLink());
   $("#searchButton").on("click", function(collect) {
     collect = $("#searchInput").val(); //collects the search input
     var url =
@@ -69,11 +53,11 @@ var pageOpener = function(open) {
             <div class='alert alert-success alert-dismissible' role='alert'>
             <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
             <span aria-hidden='true'>&times;</span></button>
-            <button class='button btn-default' type='button' href='` + data[3][i] + `'>` + data[1][i] + `</button>
+            <button class='button btn-default' type='button' href='` + data[3][i] + `' target="_blank">` + data[1][i] + `</button>
             <p class='linkText'>` + data[2][i] + `</p></div></div>`);
         }
         //button to open list of links
-        $(".button").on("click", pageOpener);
+       $(".button").on("click", pageOpener);
       }
     });
   });
