@@ -26,7 +26,7 @@ data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
 
    // window.open($(this).attr("href"), "_blank");
      window.open(goTo, "_blank");
-    }, 100);
+    }, 500);
   };
  
   //button to open Link Example
