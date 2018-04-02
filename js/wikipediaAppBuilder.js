@@ -19,11 +19,13 @@ data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
     open.stopPropagation();
 
     // prevent default anchor behavior
-    var goTo = this.getAttribute("href");
+    //var goTo = this.getAttribute("href");
     //jQUERY animation
     //$(this).toggleClass("button, button2");
    // setTimeout(function() {
-      window.open(goTo, "_blank");
+
+    window.open($(this).attr("href"), "_blank");
+   //   window.open(goTo, "_blank");
    // }, 1700);
   };
  
