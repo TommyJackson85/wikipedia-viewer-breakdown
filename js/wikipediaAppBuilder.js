@@ -30,10 +30,10 @@ data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
   };
  
   //button to open Link Example
- $("#randomButton").on("click", pageOpener);
+ $("#randomButton").on("click touchstart", pageOpener);
 
  //console.log(openLink());
-  $("#searchButton").on("click", function(collect) {
+  $("#searchButton").on("click touchstart", function(collect) {
     collect = $("#searchInput").val(); //collects the search input
     var url =
       "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
