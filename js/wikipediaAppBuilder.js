@@ -16,21 +16,21 @@ data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
 
   var pageOpener = function(open) {
     open.preventDefault();
-    open.stopPropagation();
+    //open.stopPropagation();
 
     // prevent default anchor behavior
     //var goTo = this.getAttribute("href");
     //jQUERY animation
-    //$(this).toggleClass("button, button2");
-   // setTimeout(function() {
+    $(this).toggleClass("button, button2");
+    setTimeout(function() {
 
     window.open($(this).attr("href"), "_blank");
    //   window.open(goTo, "_blank");
-   // }, 1700);
+    }, 1700);
   };
  
   //button to open Link Example
- $("#randomButton").on("click touchstart", pageOpener);
+ $("#randomButton").on("click", pageOpener);
 
  //console.log(openLink());
   $("#searchButton").on("click touchstart", function(collect) {
