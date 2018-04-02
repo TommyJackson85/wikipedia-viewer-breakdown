@@ -16,7 +16,7 @@ data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
 
   var pageOpener = function(open) {
     open.preventDefault();
-    open.stopPropagation();
+    //open.stopPropagation();
 
     // prevent default anchor behavior
     var goTo = this.getAttribute("href");
