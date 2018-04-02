@@ -1,7 +1,6 @@
 $(document).ready(function() {
-  
-  //opens page after clicking.
 
+//opens page after clicking.
 /*    <div class='col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 
 col-lg-8'><div class='alert alert-success alert-dismissible' role='alert'>
 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
@@ -13,7 +12,6 @@ Click the Random button for a Random Page, or click the 'x' to remove the link..
 data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
 </div></div> */
 
-
   var pageOpener = function(open) {
     open.preventDefault();
     //open.stopPropagation();
@@ -22,15 +20,13 @@ data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
     var goTo = this.getAttribute("href");
     //jQUERY animation
     $(this).toggleClass("button, button2");
-    setTimeout(function() {
-
-   // window.open($(this).attr("href"), "_blank");
-     window.open(goTo, "_blank");
-    }, 1500);
+      setTimeout(function() {
+        window.open(goTo, "_blank");
+    }, 1000);
   };
  
   //button to open Link Example
- $("#randomButton").on("click", pageOpener);
+  $("#randomButton").on("click", pageOpener);
 
  //console.log(openLink());
   $("#searchButton").on("click touchstart", function(collect) {
