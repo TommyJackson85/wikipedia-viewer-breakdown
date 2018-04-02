@@ -1,28 +1,13 @@
 $(document).ready(function() {
 
-//opens page after clicking.
-/*    <div class='col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 
-col-lg-8'><div class='alert alert-success alert-dismissible' role='alert'>
-<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-<span aria-hidden='true'>&times;</span>
-</button>
-<p class='linkText'><strong>Link Example: </strong>
-Click the Random button for a Random Page, or click the 'x' to remove the link..</p>
-<button id='randomButton' class='button btn-default' type='button' 
-data-href='https://en.wikipedia.org/wiki/Special:Random'>Random Link</button>
-</div></div> */
-
   var pageOpener = function(open) {
     open.preventDefault();
-    //open.stopPropagation();
-
-    // prevent default anchor behavior
     var goTo = this.getAttribute("href");
     //jQUERY animation
     $(this).toggleClass("button, button2");
       setTimeout(function() {
         window.open(goTo, "_blank");
-    }, 1000);
+    }, 1000); 
   };
  
   //button to open Link Example
